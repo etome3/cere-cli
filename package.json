@@ -1,0 +1,56 @@
+{
+  "name": "cere-cli",
+  "version": "1.0.0",
+  "description": "A complete and intuitive interactive CLI for talking to AI through the Cerebras API",
+  "main": "dist/index.js",
+  "bin": {
+    "cere": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "cerebras",
+    "ai",
+    "cli",
+    "chat",
+    "llm",
+    "interactive"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.3",
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "dotenv": "^16.4.5",
+    "inquirer": "^9.3.3",
+    "marked": "^12.0.0",
+    "marked-terminal": "^6.3.0",
+    "ora": "^8.0.1",
+    "conf": "^13.0.1",
+    "figlet": "^1.7.0",
+    "gradient-string": "^2.0.2",
+    "clipboardy": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/figlet": "^1.5.8",
+    "@types/gradient-string": "^1.1.6",
+    "@types/inquirer": "^9.0.7",
+    "@types/marked": "^6.0.0",
+    "@types/marked-terminal": "^6.1.1",
+    "@types/node": "^20.14.12",
+    "rimraf": "^5.0.9",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.4"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "type": "module"
+}
