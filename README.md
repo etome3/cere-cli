@@ -29,7 +29,7 @@ A powerful and intuitive command-line interface for interacting with AI through 
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/cere-cli.git
+git clone https://github.com/etome3/cere-cli.git
 cd cere-cli
 
 # Install dependencies
