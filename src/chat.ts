@@ -27,11 +27,13 @@ export class InteractiveChat {
     this.conversation = new ConversationManager();
   }
 
-  async start(initialMessage?: string, systemPrompt?: string): Promise<void> {
+  async start(initialMessage?: string, systemPrompt?: string, showBanner: boolean = true): Promise<void> {
     await this.conversation.initialize();
     this.isRunning = true;
 
-    displayBanner();
+    if (showBanner) {
+      displayBanner();
+    }
     displayInfo('Type /help for available commands');
 
     if (systemPrompt) {

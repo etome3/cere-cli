@@ -95,8 +95,9 @@ program
         }
       } else {
         // Interactive mode
+        displayBanner();
         const chat = new InteractiveChat();
-        await chat.start(undefined, options.system);
+        await chat.start(undefined, options.system, false);
       }
     } catch (error) {
       displayError(`Failed to start chat: ${error}`);
